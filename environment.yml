@@ -1,0 +1,16 @@
+name: dl-omr
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - python-dotenv
+  - requests
+  - graphviz
+  - python-graphviz
+  - jupyter
+  - pandas
+  - matplotlib
+  - plotly
+  - scikit-learn
+  - tensorflow
