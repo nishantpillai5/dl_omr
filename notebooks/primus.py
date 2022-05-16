@@ -55,7 +55,7 @@ class CTC_PriMuS:
             sample_filepath = self.training_list[self.current_idx]
             sample_fullpath = self.corpus_dirpath + '/' + sample_filepath + '/' + sample_filepath
 
-            print("Training:", sample_fullpath)
+            # print("Training:", sample_fullpath)
 
             # IMAGE
             if self.distortions:
@@ -114,7 +114,7 @@ class CTC_PriMuS:
             # Read files
             for sample_filepath in self.validation_list:
                 sample_fullpath = self.corpus_dirpath + '/' + sample_filepath + '/' + sample_filepath
-                print("Validation:", sample_fullpath)
+                # print("Validation:", sample_fullpath)
     
                 # IMAGE
                 sample_img = cv2.imread(sample_fullpath + '.png', cv2.IMREAD_GRAYSCALE)  # Grayscale is assumed!
