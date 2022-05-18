@@ -7,15 +7,16 @@ dependencies:
   - python=3.9
   - python-dotenv
   - requests
-  - graphviz
-  - python-graphviz
   - jupyter
   - pandas
   - matplotlib
-  - plotly
-  - scikit-learn
   - tensorflow
-  - pytorch
-  - torchvision
   - opencv
-  - seaborn
+  # - scikit-learn
+  # - graphviz
+  # - python-graphviz
+  # - plotly
+  # - pytorch
+  # - torchvision
+  # - seaborn
+  # - visualkeras

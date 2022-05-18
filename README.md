@@ -1,10 +1,56 @@
-dl_omr
-==============================
+# Deep Learning OMR
 
 A short description of the project.
 
-Project Organization
-------------
+## Commands
+
+1. Create environment
+
+```
+conda env create -f environment.yml
+conda activate dl-omr
+```
+
+2. Update dependencies
+
+```
+conda env update --name dl-omr --file environment.yml --prune
+```
+
+3. Export yml
+
+```
+conda env export -n dl-omr --from-history > environment.yml
+```
+
+4. Create GPU environment
+
+```
+conda env create -f gpu_environment.yml
+conda activate dl-omr-gpu
+```
+
+---
+
+## Guide
+
+### Install new packages
+
+Add the packages under dependencies in the `yml` file and run update dependencies command.
+
+### Data
+
+Treat raw data (and its format) as immutable. Don't overwrite the raw data. You shouldn't have to run all of the steps every time you want to make a new figure, but anyone should be able to reproduce the final products with only the code in `src` and the data in `data/raw`.
+
+### Notebooks
+
+1. Follow a naming convention that shows the owner and the order the analysis was done in. We use the format `<step>-<ghuser>-<description>.ipynb` (e.g., `0.3-bull-visualize-distributions.ipynb`).
+
+2. Refactor the good parts. Don't write code to do the same task in multiple notebooks. If it's a data preprocessing task, put it in the pipeline at src/data/make_dataset.py and load data from data/interim. If it's useful utility code, refactor it to src.
+
+---
+
+## Project Organization
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
@@ -51,7 +97,6 @@ Project Organization
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
-
---------
+---
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
