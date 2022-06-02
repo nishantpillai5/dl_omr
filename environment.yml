@@ -1,17 +1,17 @@
 name: dl-omr
 channels:
   - conda-forge
-  - pytorch
+  # - pytorch
   - defaults
 dependencies:
-  - python=3.9
+  - python
   - python-dotenv
   - requests
   - jupyter
   - pandas
   - matplotlib
   - tensorflow
-  - opencv
+  # - opencv
   # - scikit-learn
   # - graphviz
   # - python-graphviz
